@@ -1,62 +1,62 @@
 @import 'tailwindcss';
 
-@plugin "daisyui";
+@plugin 'daisyui';
 
-@plugin "daisyui/theme" {
-  name: "sunset";
-  default: true;
-  prefersdark: true;
-  color-scheme: "dark";
-  --color-base-100: #121c22;
-  --color-base-200: #0e171e;
-  --color-base-300: #091319;
-  --color-base-content: #9fb9d0;
-  --color-primary: #00d3bb;
-  --color-primary-content: oklch(14.94% 0.031 39.947);
-  --color-secondary: oklch(72.537% 0.177 2.72);
-  --color-secondary-content: oklch(14.507% 0.035 2.72);
-  --color-accent: oklch(71.294% 0.166 299.844);
-  --color-accent-content: oklch(14.258% 0.033 299.844);
-  --color-neutral: #1b262c;
-  --color-neutral-content: #94a0a9;
-  --color-info: #89e0eb;
-  --color-info-content: oklch(17.111% 0.017 206.015);
-  --color-success: #addfad;
-  --color-success-content: oklch(17.112% 0.017 144.778);
-  --color-warning: #f1c892;
-  --color-warning-content: oklch(17.113% 0.016 74.427);
-  --color-error: oklch(85.511% 0.078 16.886);
-  --color-error-content: oklch(17.102% 0.015 16.886);
-  --radius-selector: 1rem;
-  --radius-field: 0.5rem;
-  --radius-box: 0.5rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-  --border: 1px;
-  --depth: 0;
-  --noise: 0;
+@plugin 'daisyui/theme' {
+	name: 'sunset';
+	default: true;
+	prefersdark: true;
+	color-scheme: 'dark';
+	--color-base-100: #121c22;
+	--color-base-200: #0e171e;
+	--color-base-300: #091319;
+	--color-base-content: #9fb9d0;
+	--color-primary: #00d3bb;
+	--color-primary-content: oklch(14.94% 0.031 39.947);
+	--color-secondary: oklch(72.537% 0.177 2.72);
+	--color-secondary-content: oklch(14.507% 0.035 2.72);
+	--color-accent: oklch(71.294% 0.166 299.844);
+	--color-accent-content: oklch(14.258% 0.033 299.844);
+	--color-neutral: #1b262c;
+	--color-neutral-content: #94a0a9;
+	--color-info: #89e0eb;
+	--color-info-content: oklch(17.111% 0.017 206.015);
+	--color-success: #addfad;
+	--color-success-content: oklch(17.112% 0.017 144.778);
+	--color-warning: #f1c892;
+	--color-warning-content: oklch(17.113% 0.016 74.427);
+	--color-error: oklch(85.511% 0.078 16.886);
+	--color-error-content: oklch(17.102% 0.015 16.886);
+	--radius-selector: 1rem;
+	--radius-field: 0.5rem;
+	--radius-box: 0.5rem;
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+	--border: 1px;
+	--depth: 0;
+	--noise: 0;
 }
 
 * {
-  user-select: none;
-  -webkit-user-select: none;
-  -webkit-user-drag: none;
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
 }
 
 body {
-  overflow-y: contain;
-  @apply text-neutral-content font-medium h-screen w-screen overflow-hidden;
+	overflow-y: contain;
+	@apply h-screen w-screen overflow-hidden font-medium text-neutral-content;
 }
 
 @layer utilities {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
 
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
 }

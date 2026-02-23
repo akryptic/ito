@@ -1,10 +1,21 @@
 <script>
+	import AIPromptModal from '$lib/components/ui/AIPromptModal.svelte';
 	import Avatar from '$lib/components/ui/Avatar.svelte';
 	import MenuItem from '$lib/components/ui/MenuItem.svelte';
 	import ProfileSetupModal from '$lib/components/ui/ProfileSetupModal.svelte';
+	import UpdateModal from '$lib/components/ui/UpdateModal.svelte';
 	import { userManager } from '$lib/store/app.svelte';
 	import { modalManager } from '$lib/store/modal.svelte';
-	import { Cpu, FileDown, Info, RefreshCcw, Rocket, SquarePen, User } from '@lucide/svelte';
+	import {
+		BotMessageSquare,
+		Cpu,
+		FileDown,
+		Info,
+		RefreshCcw,
+		Rocket,
+		SquarePen,
+		User
+	} from '@lucide/svelte';
 </script>
 
 <div class="flex h-full flex-col gap-6">
@@ -24,7 +35,7 @@
 					description: 'Setup your profile to continue!'
 				})}
 		>
-			Edit Profile <SquarePen size="20" />
+			<SquarePen size="20" /> Edit Profile
 		</button>
 	</div>
 
@@ -33,11 +44,20 @@
 	<div>
 		<h3 class="text-sm opacity-65">Setup</h3>
 		<div class="mt-2 flex flex-col gap-3 p-2">
-			<MenuItem Icon={Cpu} label="Get AI Prompt" />
+			<MenuItem
+				Icon={Cpu}
+				label="Get AI Prompt"
+				onclick={() =>
+					modalManager.open({
+						title: 'AI Prompt',
+						icon: BotMessageSquare,
+						component: AIPromptModal
+					})}
+			/>
 			<MenuItem Icon={FileDown} label="Import Tasks" />
 			<MenuItem Icon={RefreshCcw} label="Sync With Other Devices">
-                <div class="badge badge-soft badge-info">In Progress</div>
-            </MenuItem>
+				<div class="badge badge-soft badge-info">In Progress</div>
+			</MenuItem>
 		</div>
 	</div>
 
@@ -45,9 +65,18 @@
 		<h3 class="text-sm opacity-65">App Info</h3>
 		<div class="mt-2 flex flex-col gap-3 p-2">
 			<MenuItem Icon={Info} label="App Version">
-                <span class="text-xs" >1.0.201</span>
-            </MenuItem>
-			<MenuItem Icon={Rocket} label="Updates" />
+				<span class="text-xs">1.0.201</span>
+			</MenuItem>
+			<MenuItem
+				Icon={Rocket}
+				label="Updates"
+				onclick={() =>
+					modalManager.open({
+						title: 'Update',
+						icon: Rocket,
+						component: UpdateModal
+					})}
+			/>
 		</div>
 	</div>
 </div>

@@ -62,7 +62,7 @@
 			class="btn w-full text-lg btn-primary"
 			disabled={!name || name.length < 3}
 		>
-			Save <Save size="20" strokeWidth={2.5} />
+			<Save size="20" strokeWidth={2.5} /> Save
 		</button>
 	</form>
 </div>

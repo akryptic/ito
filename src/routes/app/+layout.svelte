@@ -5,9 +5,9 @@
 	const { children } = $props();
 </script>
 
-<div class="flex flex-col h-full w-full">
+<div class="flex h-full w-full flex-col">
 	<Header />
-	<main class="flex-1 overflow-x-hidden overflow-y-auto no-scrollbar p-6">
+	<main class="no-scrollbar flex-1 overflow-x-hidden overflow-y-auto p-6">
 		{@render children()}
 	</main>
 	<NavBar />

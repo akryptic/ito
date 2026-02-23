@@ -1,1 +1,1 @@
-export {type Icon as IconType } from '@lucide/svelte'
+export { type Icon as IconType } from '@lucide/svelte';
