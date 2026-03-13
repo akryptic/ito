@@ -6,6 +6,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"build:assets": "pwa-assets-generator",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -21,7 +22,9 @@
 		"@sveltejs/kit": "^2.50.1",
 		"@sveltejs/vite-plugin-svelte": "^6.2.4",
 		"@tailwindcss/vite": "^4.1.18",
+		"@types/canvas-confetti": "^1.9.0",
 		"@types/node": "^24",
+		"@vite-pwa/assets-generator": "^1.0.2",
 		"eslint": "^9.39.2",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.14.0",
@@ -39,6 +42,8 @@
 	},
 	"dependencies": {
 		"@friendofsvelte/state": "^0.0.6-ts",
-		"daisyui": "^5.5.16"
+		"canvas-confetti": "^1.9.4",
+		"daisyui": "^5.5.16",
+		"dexie": "^4.3.0"
 	}
 }
